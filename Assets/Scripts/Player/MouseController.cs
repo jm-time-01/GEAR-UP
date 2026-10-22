@@ -7,6 +7,7 @@ public class MouseController : MonoBehaviour
     public Transform playerBody;
 
     float xRotation = 0f;
+    private bool cursorLocked = true;
 
     void Start()
     {
@@ -15,6 +16,9 @@ public class MouseController : MonoBehaviour
 
     void Update()
     {
+        if (!cursorLocked)
+            return;
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -27,4 +31,18 @@ public class MouseController : MonoBehaviour
         
         playerBody.Rotate(Vector3.up * mouseX);
     }
+
+    
+
+    public void SetCursorLocked(bool locked)
+    {
+        cursorLocked = locked;
+
+        Cursor.lockState = locked
+            ? CursorLockMode.Locked
+            : CursorLockMode.None;
+
+        Cursor.visible = !locked;
+    }
+
 }

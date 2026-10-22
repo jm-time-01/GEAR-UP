@@ -2577,49 +2577,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53547084}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1 &53841675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 418017258}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &53841676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53841675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &53841677
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53841675}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &55622768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,73 +2847,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56715518}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1001 &56989609
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2041271723}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2041271722}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &60654819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7014,49 +6904,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138386872}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1 &139516804 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 677020970}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &139516805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139516804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &139516806
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139516804}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &140287058
 GameObject:
   m_ObjectHideFlags: 0
@@ -7562,6 +7409,7 @@ GameObject:
   - component: {fileID: 148834845}
   - component: {fileID: 148834844}
   - component: {fileID: 148834848}
+  - component: {fileID: 148834849}
   m_Layer: 6
   m_Name: CAIXAO
   m_TagString: Untagged
@@ -7656,7 +7504,7 @@ Transform:
   m_GameObject: {fileID: 148834843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.9, y: 3.41, z: 15.5}
+  m_LocalPosition: {x: 36.32, y: 1.861, z: 30.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7675,53 +7523,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   displayName: CAIXAO
-  kind: 0
+  kind: 1
   itemData: {fileID: 0}
   repairDuration: 3
   isRepaired: 0
---- !u!1 &150445291 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 262473488}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &150445292
+--- !u!114 &148834849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150445291}
+  m_GameObject: {fileID: 148834843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
+  m_Script: {fileID: 11500000, guid: c5fa5906fec8f1945a82ef197e523cee, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &150445293
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 150445291}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableHighlight
+  pickupColor: {r: 1, g: 0.8, b: 0.05, a: 1}
+  repairColor: {r: 0.4862745, g: 0.9882354, b: 0, a: 1}
+  thickness: 5
 --- !u!1 &150600785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9726,49 +9546,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &180922399 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 1612926744}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &180922400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180922399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &180922401
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180922399}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1001 &181793867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14562,73 +14339,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262441065}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1001 &262473488
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 150445293}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 150445292}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &263533618
 GameObject:
   m_ObjectHideFlags: 0
@@ -15480,6 +15190,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
   m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
+--- !u!114 &278194631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278194622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fa5906fec8f1945a82ef197e523cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableHighlight
+  pickupColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  repairColor: {r: 0.4980392, g: 1, b: 0, a: 1}
+  thickness: 5
 --- !u!1 &278681876
 GameObject:
   m_ObjectHideFlags: 0
@@ -17555,49 +17280,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304718698}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1 &307008502 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 1005074877}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &307008503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307008502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &307008504
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307008502}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &308875353
 GameObject:
   m_ObjectHideFlags: 0
@@ -19804,73 +19486,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4ddf9dbec6534a14a9612193ee06f4d2, type: 3}
   m_PrefabInstance: {fileID: 336100722}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &337591368
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 829001329}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 829001328}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &337732465
 GameObject:
   m_ObjectHideFlags: 0
@@ -21287,73 +20902,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365932012}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1001 &367513193
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1100354453}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1100354452}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &368869261
 GameObject:
   m_ObjectHideFlags: 0
@@ -24659,73 +24207,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 152095147e5492c41a9718b9b09863a4, type: 3}
   m_PrefabInstance: {fileID: 416102576}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &418017258
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 53841677}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 53841676}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &418056703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27680,49 +27161,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c886fb979d2b589419f4cd3003261086, type: 3}
   m_PrefabInstance: {fileID: 462781853}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &464388979 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 958126287}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &464388980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464388979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &464388981
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464388979}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &464723780
 GameObject:
   m_ObjectHideFlags: 0
@@ -28719,49 +28157,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483041155}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1 &483321536 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 1206360127}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &483321537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483321536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &483321538
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483321536}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1001 &484632750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34340,73 +33735,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564304417}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1001 &570178678
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1141718091}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1141718090}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &572199279
 GameObject:
   m_ObjectHideFlags: 0
@@ -40379,73 +39707,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676519054}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1001 &677020970
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 139516806}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 139516805}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &677374433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48055,7 +47316,6 @@ GameObject:
   - component: {fileID: 811073611}
   - component: {fileID: 811073610}
   - component: {fileID: 811073612}
-  - component: {fileID: 811073613}
   m_Layer: 0
   m_Name: CameraMiniMap
   m_TagString: Untagged
@@ -48186,19 +47446,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LimitMap
   player: {fileID: 1860304516}
---- !u!114 &811073613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811073608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4db3ab1f3e228146a435e6047034b2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MinimapFilterController
-  mapImage: {fileID: 714660065}
 --- !u!1 &811366569
 GameObject:
   m_ObjectHideFlags: 0
@@ -49868,49 +49115,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ea9803764c3c1e74b83f6dda1cfa0885, type: 3}
   m_PrefabInstance: {fileID: 492858873}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &829001327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 337591368}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &829001328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829001327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &829001329
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829001327}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1001 &830419771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54636,49 +53840,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0f5d2e6533e3fb44fbd094c173ba3f32, type: 3}
   m_PrefabInstance: {fileID: 921031214}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &921475899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 2034519062}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &921475900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921475899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &921475901
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921475899}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &924463170
 GameObject:
   m_ObjectHideFlags: 0
@@ -56768,73 +55929,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4ddf9dbec6534a14a9612193ee06f4d2, type: 3}
   m_PrefabInstance: {fileID: 956813137}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &958126287
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 464388981}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 464388980}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &958780507
 GameObject:
   m_ObjectHideFlags: 0
@@ -59896,73 +58990,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0f5d2e6533e3fb44fbd094c173ba3f32, type: 3}
   m_PrefabInstance: {fileID: 1003922842}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1005074877
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 307008504}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 307008503}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &1006173614
 GameObject:
   m_ObjectHideFlags: 0
@@ -65705,49 +64732,6 @@ Transform:
   - {fileID: 684396887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1100354451 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 367513193}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1100354452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100354451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &1100354453
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100354451}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1001 &1102686984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68296,24 +67280,42 @@ MonoBehaviour:
   hotbarSize: 4
   inventorySize: 12
   hotbar:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
   inventory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
+  - item: {fileID: 0}
+    quantity: 0
   hotbarUI: {fileID: 1573981658}
   inventoryPanelUI: {fileID: 1842395602}
+  dropOrigin: {fileID: 0}
+  inventoryPanelRect: {fileID: 0}
+  hotbarPanelRect: {fileID: 0}
 --- !u!4 &1138700257
 Transform:
   m_ObjectHideFlags: 0
@@ -68342,6 +67344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
   inventoryPanel: {fileID: 1842395597}
+  mouseController: {fileID: 330585548}
 --- !u!1001 &1139983754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68588,49 +67591,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140897130}
   m_Mesh: {fileID: 2508379555180789328, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1 &1141718089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 570178678}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1141718090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141718089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &1141718091
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141718089}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &1141720287
 GameObject:
   m_ObjectHideFlags: 0
@@ -73653,73 +72613,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5d2e6533e3fb44fbd094c173ba3f32, type: 3}
---- !u!1001 &1206360127
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 483321538}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 483321537}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &1206760463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81641,73 +80534,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c886fb979d2b589419f4cd3003261086, type: 3}
   m_PrefabInstance: {fileID: 1330322940}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1331752270
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670308968}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1670308967}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &1332681546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100082,73 +98908,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152095147e5492c41a9718b9b09863a4, type: 3}
---- !u!1001 &1612926744
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 180922401}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 180922400}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &1612989047
 GameObject:
   m_ObjectHideFlags: 0
@@ -101036,7 +99795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 10.969988}
+  m_AnchoredPosition: {x: 0, y: 24.29}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634693862
@@ -103185,73 +101944,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655391842}
   m_Mesh: {fileID: -6477063338758071155, guid: 52f409e674931c8438f2b7ad03d71a3b, type: 3}
---- !u!1001 &1656063952
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1972396398}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1972396397}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &1656134690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103866,121 +102558,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0f5d2e6533e3fb44fbd094c173ba3f32, type: 3}
   m_PrefabInstance: {fileID: 1668164704}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1670308966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 1331752270}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1670308967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670308966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &1670308968
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670308966}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!4 &1672875776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 152095147e5492c41a9718b9b09863a4, type: 3}
   m_PrefabInstance: {fileID: 1728742512}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1672952488
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1755742541}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1755742540}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1001 &1673477337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108231,49 +106813,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ea9803764c3c1e74b83f6dda1cfa0885, type: 3}
   m_PrefabInstance: {fileID: 31330411}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1755742539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 1672952488}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1755742540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755742539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &1755742541
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755742539}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!4 &1756081121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 152095147e5492c41a9718b9b09863a4, type: 3}
@@ -117383,6 +115922,7 @@ GameObject:
   - component: {fileID: 1927490935}
   - component: {fileID: 1927490937}
   - component: {fileID: 1927490936}
+  - component: {fileID: 1927490938}
   m_Layer: 5
   m_Name: ItemIcon_0
   m_TagString: Untagged
@@ -117447,6 +115987,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927490934}
   m_CullTransparentMesh: 1
+--- !u!114 &1927490938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927490934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41712443896036343b427b50070e1d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlotUI
+  isHotbar: 1
+  slotIndex: 0
+  icon: {fileID: 0}
 --- !u!1001 &1930788727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120103,49 +118658,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970756455}
   m_CullTransparentMesh: 1
---- !u!1 &1972396396 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 1656063952}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1972396397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972396396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &1972396398
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972396396}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &1972921885
 GameObject:
   m_ObjectHideFlags: 0
@@ -124016,73 +122528,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 152095147e5492c41a9718b9b09863a4, type: 3}
   m_PrefabInstance: {fileID: 2030852604}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2034519062
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Name
-      value: Chave De Roda
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 921475901}
-    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 921475900}
-  m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1 &2034709736
 GameObject:
   m_ObjectHideFlags: 0
@@ -124395,49 +122840,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0f5d2e6533e3fb44fbd094c173ba3f32, type: 3}
   m_PrefabInstance: {fileID: 2038529742}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2041271721 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
-  m_PrefabInstance: {fileID: 56989609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2041271722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041271721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  displayName: Chave De Boca
-  kind: 0
-  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
-  repairDuration: 3
-  isRepaired: 0
---- !u!65 &2041271723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041271721}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
-  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
 --- !u!1 &2041585987
 GameObject:
   m_ObjectHideFlags: 0
@@ -130599,11 +129001,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.07
+      value: 5.818
       objectReference: {fileID: 0}
     - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 4609500852232310452, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -130647,6 +129049,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 278194626}
+    - targetCorrespondingSourceObject: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 278194631}
   m_SourcePrefab: {fileID: 100100000, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -130665,21 +129070,6 @@ SceneRoots:
   - {fileID: 811073609}
   - {fileID: 1860304517}
   - {fileID: 3220163347491203513}
-  - {fileID: 1672952488}
-  - {fileID: 418017258}
-  - {fileID: 1656063952}
-  - {fileID: 262473488}
-  - {fileID: 1206360127}
-  - {fileID: 1005074877}
-  - {fileID: 337591368}
-  - {fileID: 1331752270}
-  - {fileID: 677020970}
-  - {fileID: 56989609}
-  - {fileID: 2034519062}
-  - {fileID: 958126287}
-  - {fileID: 367513193}
-  - {fileID: 1612926744}
-  - {fileID: 570178678}
   - {fileID: 1138700257}
   - {fileID: 17195272}
   - {fileID: 445400189}

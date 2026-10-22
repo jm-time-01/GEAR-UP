@@ -1,6 +1,8 @@
-using UnityEngine;
 
-public class InventorySlot : MonoBehaviour
+using System;
+
+[Serializable]
+public class InventorySlot
 {
     public ItemData item;
     public int quantity;
@@ -13,6 +15,6 @@ public class InventorySlot : MonoBehaviour
     public void Clear()
     {
         item = null;
-        quantity = 0;   
+        quantity = 0;
     }
 }

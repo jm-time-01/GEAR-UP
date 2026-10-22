@@ -17,6 +17,7 @@ public class RaycastInteractor : MonoBehaviour
     private Interactable currentInteractable;
     private float repairTimer = 0f;
 
+    private Interactable highlightedInteractable;
     void Awake()
     {
         // Define por padrão a LayerMask para a layer chamada "Interactable" se existir
@@ -37,48 +38,117 @@ public class RaycastInteractor : MonoBehaviour
         HandleInput();
     }
 
+
     void DoRaycast()
     {
         currentInteractable = null;
 
         var cam = Camera.main;
-        if (cam == null) return;
+
+        if (cam == null)
+        {
+            UpdateHighlight(null);
+
+            if (ui != null)
+                ui.Hide();
+
+            repairTimer = 0f;
+            return;
+        }
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, interactLayer))
+
+        if (Physics.Raycast(ray,out RaycastHit hit,maxDistance,interactLayer))
         {
-            var interact = hit.collider.GetComponentInParent<Interactable>();
-            if (interact != null)
+            Interactable interact = hit.collider.GetComponentInParent<Interactable>();
+
+            if (interact != null && interact.isActiveAndEnabled)
             {
                 currentInteractable = interact;
-                if (interact.kind == InteractableKind.Pickup)
-                {
-                    ui.Show(interact.displayName, $"Pressione '{interactKey}' para coletar");
-                    ui.SetProgress(0f);
-                }
-                else if (interact.kind == InteractableKind.Repairable)
-                {
-                    if (interact.isRepaired)
-                    {
-                        ui.Show(interact.displayName, "Reparado");
-                        ui.SetProgress(1f);
-                    }
-                    else
-                    {
-                        float pct = Mathf.Clamp01(repairTimer / Mathf.Max(0.0001f, interact.repairDuration));
-                        ui.Show(interact.displayName, $"Segure '{interactKey}' para reparar ({Mathf.RoundToInt(pct*100)}%)");
-                        ui.SetProgress(pct);
-                    }
-                }
-                return;
             }
         }
 
-        // nenhum objeto válido
-        ui.Hide();
-        repairTimer = 0f;
+        // Atualiza o contorno somente quando o alvo mudar.
+        UpdateHighlight(currentInteractable);
+
+        if (currentInteractable == null)
+        {
+            if (ui != null)
+                ui.Hide();
+
+            repairTimer = 0f;
+            return;
+        }
+
+        if (currentInteractable.kind == InteractableKind.Pickup)
+        {
+            if (ui != null)
+            {
+                ui.Show(currentInteractable.displayName, $"Pressione '{interactKey}' para coletar");
+
+                ui.SetProgress(0f);
+            }
+        }
+        else if (currentInteractable.kind == InteractableKind.Repairable)
+        {
+            if (ui != null)
+            {
+                if (currentInteractable.isRepaired)
+                {
+                    ui.Show(currentInteractable.displayName, "Reparado");
+                    ui.SetProgress(1f);
+                }
+                else
+                {
+                    float pct = Mathf.Clamp01(repairTimer / Mathf.Max(0.0001f, currentInteractable.repairDuration));
+
+                    ui.Show(currentInteractable.displayName, $"Segure '{interactKey}' para reparar " + $"({Mathf.RoundToInt(pct * 100)}%)");
+
+                    ui.SetProgress(pct);
+                }
+            }
+        }
     }
 
+
+    void UpdateHighlight(Interactable target)
+    {
+        if (highlightedInteractable == target)
+            return;
+
+        if (highlightedInteractable != null)
+        {
+            InteractableHighlight previous =
+                highlightedInteractable.GetComponent<InteractableHighlight>();
+
+            if (previous != null)
+            {
+                Debug.Log("Desativando outline: " + highlightedInteractable.name);
+                previous.SetHighlighted(false);
+            }
+        }
+
+        highlightedInteractable = target;
+
+        if (highlightedInteractable != null)
+        {
+            InteractableHighlight highlight =
+                highlightedInteractable.GetComponent<InteractableHighlight>();
+
+            if (highlight != null)
+            {
+                Debug.Log("Ativando outline: " + highlightedInteractable.name);
+                highlight.SetHighlighted(true);
+            }
+            else
+            {
+                Debug.LogWarning(
+                    "O objeto não possui InteractableHighlight: " +
+                    highlightedInteractable.name
+                );
+            }
+        }
+    }
     void HandleInput()
     {
         if (currentInteractable == null) return;
