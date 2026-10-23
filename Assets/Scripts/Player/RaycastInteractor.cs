@@ -14,6 +14,9 @@ public class RaycastInteractor : MonoBehaviour
     [Tooltip("Referência ao componente de UI que mostra nome/prompt/progresso")]
     public RaycastUI ui;
 
+    [Header("Integração com inventário")]
+    public InventoryUI inventoryUI;
+
     private Interactable currentInteractable;
     private float repairTimer = 0f;
 
@@ -32,11 +35,29 @@ public class RaycastInteractor : MonoBehaviour
         }
     }
 
+
     void Update()
     {
+        // Não interage com objetos enquanto o inventário estiver aberto.
+        if (inventoryUI != null &&
+            inventoryUI.inventoryPanel != null &&
+            inventoryUI.inventoryPanel.activeSelf)
+        {
+            currentInteractable = null;
+            repairTimer = 0f;
+
+            UpdateHighlight(null);
+
+            if (ui != null)
+                ui.Hide();
+
+            return;
+        }
+
         DoRaycast();
         HandleInput();
     }
+
 
 
     void DoRaycast()

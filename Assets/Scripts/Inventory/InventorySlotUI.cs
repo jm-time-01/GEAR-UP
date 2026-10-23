@@ -63,6 +63,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         UpdateDraggedPosition(eventData);
     }
 
+
     public void OnEndDrag(PointerEventData eventData)
     {
         if (draggedRect == null)
@@ -72,30 +73,38 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         bool handled = false;
 
-        // Descobre se o mouse terminou sobre outro slot.
-        List<RaycastResult> results = new List<RaycastResult>();
-
-        EventSystem.current.RaycastAll(eventData, results);
-
-        InventorySlotUI targetSlot = null;
-
-        foreach (RaycastResult result in results)
+        if (inventoryManager != null && EventSystem.current != null)
         {
-            targetSlot = result.gameObject.GetComponentInParent<InventorySlotUI>();
+            // Detecta todos os elementos UI sob o mouse.
+            List<RaycastResult> results = new List<RaycastResult>();
 
+            EventSystem.current.RaycastAll(eventData, results);
+
+            InventorySlotUI targetSlot = null;
+
+            foreach (RaycastResult result in results)
+            {
+                InventorySlotUI candidate = result.gameObject.GetComponentInParent<InventorySlotUI>();
+
+                if (candidate != null && candidate != this)
+                {
+                    targetSlot = candidate;
+                    break;
+                }
+            }
+
+            // Se encontrou outro slot, troca os itens.
             if (targetSlot != null)
-                break;
-        }
+            {
+                inventoryManager.MoveOrSwap(isHotbar, slotIndex, targetSlot.isHotbar, targetSlot.slotIndex);
 
-        if (targetSlot != null)
-        {
-            inventoryManager.MoveOrSwap(isHotbar, slotIndex, targetSlot.isHotbar, targetSlot.slotIndex);
-
-            handled = true;
-        }
-        else if (inventoryManager.IsOutsideInventoryUI(eventData.position))
-        {
-            handled = inventoryManager.DropItemFromSlot(isHotbar, slotIndex);
+                handled = true;
+            }
+            // Se não encontrou slot, verifica se soltou fora dos painéis.
+            else if (inventoryManager.IsOutsideInventoryUI(eventData.position))
+            {
+                handled = inventoryManager.DropItemFromSlot(isHotbar, slotIndex);
+            }
         }
 
         if (!handled)
@@ -106,6 +115,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         draggedRect = null;
         draggedImage = null;
     }
+
 
     private void UpdateDraggedPosition(PointerEventData eventData)
     {

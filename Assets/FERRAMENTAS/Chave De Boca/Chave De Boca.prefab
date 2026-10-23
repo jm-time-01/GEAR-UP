@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5308815019042224673
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.0262804
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.66
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_Name
+      value: Chave De Boca
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5722110073049767561}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2841184467747279977}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6532203335168599320}
+  m_SourcePrefab: {fileID: 100100000, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+--- !u!1 &5002895485544433520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a59e7cc27499ff428f5d79d3c42a26b, type: 3}
+  m_PrefabInstance: {fileID: 5308815019042224673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5722110073049767561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002895485544433520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00056581094, y: 0.003369842, z: 0.00021513016}
+  m_Center: {x: 0.0000020212465, y: 0.00007059246, z: 0.00004813309}
+--- !u!114 &2841184467747279977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002895485544433520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b123a517e1da514591e701345ce6e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  displayName: Chave De Boca
+  kind: 0
+  itemData: {fileID: 11400000, guid: 48c026fe3a30d4941b83060cf07258db, type: 2}
+  repairDuration: 3
+  isRepaired: 0
+--- !u!114 &6532203335168599320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002895485544433520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fa5906fec8f1945a82ef197e523cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableHighlight
+  pickupColor: {r: 1, g: 0.8, b: 0.05, a: 1}
+  repairColor: {r: 0.05, g: 0.9, b: 1, a: 1}
+  thickness: 5

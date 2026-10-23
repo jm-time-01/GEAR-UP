@@ -16,4 +16,7 @@ MonoBehaviour:
   icon: {fileID: 1652921854, guid: 8700a8d9a0300844b9697ef8f6be0825, type: 3}
   stackable: 0
   maxStack: 1
-  worldPrefab: {fileID: 3797638630757536782, guid: 6ab15a50df8eae849b677d71cdf9e5e3, type: 3}
+  worldPrefab: {fileID: 5002895485544433520, guid: 7d4890e35a590ee49b65b87933a57207, type: 3}
+  heldPrefab: {fileID: 5002895485544433520, guid: 7d4890e35a590ee49b65b87933a57207, type: 3}
+  heldPosition: {x: 0, y: 0, z: 0}
+  heldRotation: {x: 0, y: 0, z: 0}
