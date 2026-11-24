@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class ControleCarro : MonoBehaviour
@@ -43,7 +42,10 @@ public class ControleCarro : MonoBehaviour
     void Start()
     {
         if (rb != null && centerOfMass != null)
-            rb.centerOfMass = transform.InverseTransformPoint(centerOfMass.position);
+        {
+            rb.centerOfMass =
+                transform.InverseTransformPoint(centerOfMass.position);
+        }
     }
 
     void Update()
@@ -144,7 +146,8 @@ public class ControleCarro : MonoBehaviour
 
     void HandleEngine()
     {
-        float localSpeed = transform.InverseTransformDirection(rb.linearVelocity).z;
+        float localSpeed =
+            transform.InverseTransformDirection(rb.linearVelocity).z;
 
         WheelFL.motorTorque = 0f;
         WheelFR.motorTorque = 0f;
@@ -211,4 +214,5 @@ public class ControleCarro : MonoBehaviour
         wheelMesh.position = position;
         wheelMesh.rotation = rotation;
     }
+
 }

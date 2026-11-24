@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
@@ -6,6 +5,7 @@ public class EntrarCarro : MonoBehaviour
 {
     [Header("Personagem")]
     public Transform player;
+    public CharacterController characterController;
     public Collider[] colisoresPlayer;
     public Renderer[] modelosPlayer;
     public Behaviour[] scriptsMovimento;
@@ -16,14 +16,11 @@ public class EntrarCarro : MonoBehaviour
 
     [Header("Ponto de saida")]
     public Transform pontoSaida;
+    public float alturaExtraSaida = 0.5f;
 
     [Header("Cameras")]
     public Camera cameraPlayer;
     public Camera cameraCarro;
-
-    [Header("Ajuste de saida")]
-    public float alturaExtraSaida = 0.5f;
-    public CharacterController characterController;
 
     private bool dentroDaArea = false;
     private bool dentroDoCarro = false;
@@ -78,6 +75,7 @@ public class EntrarCarro : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             dentroDaArea = true;
+            Debug.Log("Player entrou na área do carro!");
         }
     }
 
@@ -91,11 +89,11 @@ public class EntrarCarro : MonoBehaviour
 
     void Entrar()
     {
-
         if (player == null || carro == null ||
-            controleCarro == null)
+            controleCarro == null || cameraPlayer == null ||
+            cameraCarro == null)
         {
-            Debug.LogError("Configure Player e Carro no Inspector!");
+            Debug.LogError("Configure as referências do EntrarCarro!");
             return;
         }
 
@@ -104,17 +102,23 @@ public class EntrarCarro : MonoBehaviour
 
         paiOriginal = player.parent;
 
+        if (characterController != null)
+            characterController.enabled = false;
+
         player.SetParent(carro, true);
         player.position = carro.position;
 
         foreach (Renderer modelo in modelosPlayer)
-            if (modelo != null) modelo.enabled = false;
+            if (modelo != null)
+                modelo.enabled = false;
 
         foreach (Collider colisor in colisoresPlayer)
-            if (colisor != null) colisor.enabled = false;
+            if (colisor != null)
+                colisor.enabled = false;
 
         foreach (Behaviour script in scriptsMovimento)
-            if (script != null && script != this) script.enabled = false;
+            if (script != null && script != this)
+                script.enabled = false;
 
         cameraPlayer.enabled = false;
         cameraCarro.enabled = true;
@@ -122,8 +126,11 @@ public class EntrarCarro : MonoBehaviour
         cameraPlayer.gameObject.tag = "Untagged";
         cameraCarro.gameObject.tag = "MainCamera";
 
-        if (audioPlayer != null) audioPlayer.enabled = false;
-        if (audioCarro != null) audioCarro.enabled = true;
+        if (audioPlayer != null)
+            audioPlayer.enabled = false;
+
+        if (audioCarro != null)
+            audioCarro.enabled = true;
 
         controleCarro.SetPlayerInside(true);
 
@@ -134,54 +141,60 @@ public class EntrarCarro : MonoBehaviour
     {
         if (pontoSaida == null)
         {
-            Debug.LogError("PontoSaida não foi configurado!");
+            Debug.LogError("Configure o PontoSaida!");
             return;
         }
 
         controleCarro.StopCar();
 
-        // Desativa o CharacterController antes de reposicionar
+        // Desativa o CharacterController antes de mover o jogador.
         if (characterController != null)
             characterController.enabled = false;
 
-        // Desvincula o jogador do carro
+        // Retira o jogador da hierarquia do carro.
         player.SetParent(paiOriginal, true);
 
-        // Posiciona o jogador no ponto de saída
+        // Posiciona o jogador ao lado do carro.
         Vector3 novaPosicao = pontoSaida.position;
         novaPosicao.y += alturaExtraSaida;
 
         player.position = novaPosicao;
         player.rotation = pontoSaida.rotation;
 
-        // Reativa câmera do jogador
+        // Restaura as câmeras.
         cameraCarro.enabled = false;
         cameraPlayer.enabled = true;
 
         cameraCarro.gameObject.tag = tagCarroOriginal;
         cameraPlayer.gameObject.tag = tagPlayerOriginal;
 
-        if (audioCarro != null) audioCarro.enabled = false;
-        if (audioPlayer != null) audioPlayer.enabled = true;
+        if (audioCarro != null)
+            audioCarro.enabled = false;
 
-        // Reativa os modelos
+        if (audioPlayer != null)
+            audioPlayer.enabled = true;
+
+        // Mostra o personagem novamente.
         foreach (Renderer modelo in modelosPlayer)
-            if (modelo != null) modelo.enabled = true;
+            if (modelo != null)
+                modelo.enabled = true;
 
-        // Reativa os colisores
         foreach (Collider colisor in colisoresPlayer)
-            if (colisor != null) colisor.enabled = true;
+            if (colisor != null)
+                colisor.enabled = true;
 
-        // Reativa o CharacterController
+        // Reativa o controlador.
         if (characterController != null)
             characterController.enabled = true;
 
-        // Reativa os scripts de movimentação
+        // Reativa os scripts de movimentação.
         foreach (Behaviour script in scriptsMovimento)
-            if (script != null && script != this) script.enabled = true;
+            if (script != null && script != this)
+                script.enabled = true;
 
         dentroDoCarro = false;
 
-        Debug.Log("Player reposicionado em: " + player.position);
+        Debug.Log("Player saiu em: " + player.position);
     }
+
 }
