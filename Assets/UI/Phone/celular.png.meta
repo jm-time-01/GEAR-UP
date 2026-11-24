@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: celular_0
+      name: Celular_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 12
-        width: 567
-        height: 1088
+        x: 790
+        y: 216
+        width: 423
+        height: 756
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a9c291aca542ff4c9e8ce33a359cfe2
-      internalID: 848984864
+      spriteID: 52468c9b055ab8845ae41c9c9af5a4a0
+      internalID: 1005035217
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8f4d0189da367e141870dd8fe5c84e86
+    spriteID: 5bbc8b9e51b55dd4fa183ae6a763dfd1
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      celular_0: 848984864
+      Celular_0: 1005035217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
