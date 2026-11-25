@@ -39,7 +39,7 @@ public class CallGenerator : MonoBehaviour
     public List<CallData> historicoChamados = new List<CallData>();
 
     [Header("CHAMADO ATUAL")]
-    [HideInInspector]
+    [NonSerialized]
     public CallData chamadoAtual = null;
 
     private GameObject carroAtivo;
@@ -52,12 +52,18 @@ public class CallGenerator : MonoBehaviour
     public event Action<CallData> OnCallDeclined;
     public event Action<CallData> OnCallCompleted;
 
-    private void Start()
+   
+    void Start()
     {
+        chamadoAtual = null;
+        servicoAtivo = false;
+        carroAtivo = null;
+
         AgendarProximoChamado();
 
         Debug.Log("Sistema de chamados iniciado!");
     }
+
 
     private void Update()
     {
