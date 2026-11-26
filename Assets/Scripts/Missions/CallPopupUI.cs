@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class CallPopupUI : MonoBehaviour
 {
-    [Header("Sistema de chamados")]
+    [Header("Sistemas")]
     public CallGenerator callGenerator;
+    public PhoneController phoneController;
+
+    [Header("Tempo de exibição do chamado")]
+    [Min(1f)]
+    public float tempoExibicao = 8f;
 
     [Header("Popup 1 - Chamado recebido")]
     public GameObject popupChamadoRecebido;
@@ -21,47 +26,113 @@ public class CallPopupUI : MonoBehaviour
     public TMP_Text textoLocal;
     public Button botaoEntendi;
 
+    private float contadorPopup;
+    private bool popupRecebidoVisivel;
+    private bool detalhesServicoAbertos;
+
     private void Start()
     {
-        // Os dois popups começam escondidos
-        popupChamadoRecebido.SetActive(false);
-        popupServicoAceito.SetActive(false);
+        // Esconde os dois popups ao iniciar
+        EsconderPopups();
 
         if (callGenerator == null)
         {
-            Debug.LogError("CallGenerator não configurado!");
+            Debug.LogError("CallGenerator não configurado no CallPopupUI!");
             return;
         }
 
+        if (phoneController == null)
+        {
+            Debug.LogError("PhoneController não configurado no CallPopupUI!");
+            return;
+        }
+
+        // Conecta aos eventos
         callGenerator.OnCallGenerated += MostrarChamado;
 
-        botaoAceitar.onClick.AddListener(AceitarChamado);
-        botaoRecusar.onClick.AddListener(RecusarChamado);
-        botaoEntendi.onClick.AddListener(FecharDetalhes);
+        phoneController.OnPhoneStateChanged += AtualizarEstadoCelular;
+
+        // Configura os botões
+        if (botaoAceitar != null)
+            botaoAceitar.onClick.AddListener(AceitarChamado);
+
+        if (botaoRecusar != null)
+            botaoRecusar.onClick.AddListener(RecusarChamado);
+
+        if (botaoEntendi != null)
+            botaoEntendi.onClick.AddListener(FecharDetalhes);
 
         Debug.Log("CallPopupUI conectado!");
     }
 
-    // PRIMEIRO POPUP
+    private void Update()
+    {
+        // O contador só funciona enquanto o popup
+        // está visível e o celular está aberto.
+        if (!popupRecebidoVisivel)
+            return;
+
+        if (phoneController == null || !phoneController.IsPhoneOpen)
+            return;
+
+        contadorPopup -= Time.deltaTime;
+
+        if (contadorPopup <= 0f)
+        {
+            EsconderPopupRecebido();
+        }
+    }
+
+    // CHAMADO GERADO
     private void MostrarChamado(CallData chamado)
     {
         if (chamado == null)
             return;
 
-        textoCliente.text = chamado.nomeCliente;
+        // Atualiza a primeira mensagem
+        if (textoCliente != null)
+            textoCliente.text = chamado.nomeCliente;
 
-        textoPagamento.text =
-            "Valor: R$ " +
-            chamado.pagamento.ToString("F2");
+        if (textoPagamento != null)
+        {
+            textoPagamento.text =
+                "Valor do serviço: R$ " +
+                chamado.pagamento.ToString("F2");
+        }
 
-        // Mostra somente o popup de recebimento
-        popupServicoAceito.SetActive(false);
-        popupChamadoRecebido.SetActive(true);
+        // Reinicia o tempo de exibição
+        contadorPopup = tempoExibicao;
 
-        Debug.Log("Popup de chamado recebido exibido!");
+        popupRecebidoVisivel = true;
+
+        // Só mostra se o celular estiver aberto
+        if (phoneController != null &&
+            phoneController.IsPhoneOpen)
+        {
+            MostrarPopupRecebido();
+        }
+
+        Debug.Log("Chamado recebido registrado na interface!");
     }
 
-    // ACEITAR
+    private void MostrarPopupRecebido()
+    {
+        if (popupChamadoRecebido != null)
+            popupChamadoRecebido.SetActive(true);
+
+        if (popupServicoAceito != null)
+            popupServicoAceito.SetActive(false);
+    }
+
+    private void EsconderPopupRecebido()
+    {
+        popupRecebidoVisivel = false;
+
+        if (popupChamadoRecebido != null)
+            popupChamadoRecebido.SetActive(false);
+    }
+
+    // ACEITAR CHAMADO
     public void AceitarChamado()
     {
         if (callGenerator == null)
@@ -69,7 +140,7 @@ public class CallPopupUI : MonoBehaviour
 
         callGenerator.AceitarChamado();
 
-        // Só troca os painéis se o chamado foi aceito
+        // Confirma que o serviço realmente foi aceito
         if (!callGenerator.servicoAtivo)
             return;
 
@@ -79,20 +150,47 @@ public class CallPopupUI : MonoBehaviour
             return;
 
         // Preenche o segundo popup
-        textoProblema.text =
-            "Problema: " + chamado.tipoConserto.ToString();
+        if (textoProblema != null)
+        {
+            textoProblema.text =
+                "Problema: " +
+                chamado.tipoConserto.ToString();
+        }
 
-        textoLocal.text =
-            "Local: " + chamado.endereco;
+        if (textoLocal != null)
+        {
+            textoLocal.text =
+                "Local do serviço: " +
+                chamado.endereco;
+        }
 
-        // Esconde o primeiro e mostra o segundo
-        popupChamadoRecebido.SetActive(false);
-        popupServicoAceito.SetActive(true);
+        popupRecebidoVisivel = false;
+        detalhesServicoAbertos = true;
 
-        Debug.Log("Popup de serviço aceito exibido!");
+        // Primeiro popup desaparece
+        if (popupChamadoRecebido != null)
+            popupChamadoRecebido.SetActive(false);
+
+        // Segundo popup aparece
+        if (phoneController != null &&
+            phoneController.IsPhoneOpen)
+        {
+            MostrarPopupServico();
+        }
+
+        Debug.Log("Chamado aceito. Detalhes do serviço exibidos!");
     }
 
-    // RECUSAR
+    private void MostrarPopupServico()
+    {
+        if (popupChamadoRecebido != null)
+            popupChamadoRecebido.SetActive(false);
+
+        if (popupServicoAceito != null)
+            popupServicoAceito.SetActive(true);
+    }
+
+    // RECUSAR CHAMADO
     public void RecusarChamado()
     {
         if (callGenerator == null)
@@ -100,28 +198,78 @@ public class CallPopupUI : MonoBehaviour
 
         callGenerator.RecusarChamado();
 
-        // Fecha somente o primeiro popup
-        popupChamadoRecebido.SetActive(false);
+        popupRecebidoVisivel = false;
+        detalhesServicoAbertos = false;
 
-        // O segundo continua escondido
-        popupServicoAceito.SetActive(false);
+        EsconderPopups();
     }
 
     // BOTÃO ENTENDI
     public void FecharDetalhes()
     {
-        popupServicoAceito.SetActive(false);
+        detalhesServicoAbertos = false;
 
-        // O serviço continua ativo no CallGenerator.
-        // Este botão apenas fecha a janela de informações.
+        if (popupServicoAceito != null)
+            popupServicoAceito.SetActive(false);
+
+        // O serviço continua ativo.
+    }
+
+    // CELULAR ABERTO OU FECHADO
+    private void AtualizarEstadoCelular(bool aberto)
+    {
+        if (!aberto)
+        {
+            // Fechar o celular apenas esconde a interface.
+            // Não recusa nem cancela o chamado.
+            EsconderPopups();
+            return;
+        }
+
+        // Ao abrir o celular, verifica o estado do chamado.
+        if (callGenerator == null)
+            return;
+
+        if (callGenerator.chamadoAtual == null)
+        {
+            EsconderPopups();
+            return;
+        }
+
+        if (callGenerator.chamadoAtual.status == CallStatus.Pendente)
+        {
+            // Chamado pendente: mostra novamente
+            // e reinicia o tempo de exibição.
+            popupRecebidoVisivel = true;
+            contadorPopup = tempoExibicao;
+
+            MostrarPopupRecebido();
+        }
+        else if (callGenerator.servicoAtivo &&
+                 detalhesServicoAbertos)
+        {
+            // Serviço aceito: mostra os detalhes
+            // se o jogador ainda não os fechou.
+            MostrarPopupServico();
+        }
+    }
+
+    private void EsconderPopups()
+    {
+        if (popupChamadoRecebido != null)
+            popupChamadoRecebido.SetActive(false);
+
+        if (popupServicoAceito != null)
+            popupServicoAceito.SetActive(false);
     }
 
     private void OnDestroy()
     {
         if (callGenerator != null)
-        {
             callGenerator.OnCallGenerated -= MostrarChamado;
-        }
+
+        if (phoneController != null)
+            phoneController.OnPhoneStateChanged -= AtualizarEstadoCelular;
 
         if (botaoAceitar != null)
             botaoAceitar.onClick.RemoveListener(AceitarChamado);
