@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class DayNightCycle : MonoBehaviour
@@ -8,14 +7,13 @@ public class DayNightCycle : MonoBehaviour
 
     public float duracaoDoDia = 120f;
 
-    public bool EstaDeNoite = false;
-
     private float tempo;
     private Material skyboxInstancia;
+    public float AnguloAtual { get; private set; }
 
     void Start()
     {
-        // Cria uma cÃ³pia do Skybox para nÃ£o alterar o material original
+        // Cria uma cópia do Skybox para não alterar o material original
         if (skyboxMaterial != null)
         {
             skyboxInstancia = new Material(skyboxMaterial);
@@ -29,29 +27,27 @@ public class DayNightCycle : MonoBehaviour
         tempo %= duracaoDoDia;
 
         float angulo = (tempo / duracaoDoDia) * 360f;
-
-        // Identifica se Ã© dia ou noite
-        EstaDeNoite = angulo >= 180f;
+        AnguloAtual = angulo;
 
         sol.transform.rotation = Quaternion.Euler(
             angulo, 170f, 0f
         );
 
-        // Intensidade da iluminaÃ§Ã£o
+        // Intensidade da iluminação
         float intensidade = Mathf.Clamp01(
             Mathf.Sin(angulo * Mathf.Deg2Rad)
         );
 
         sol.intensity = intensidade * 1.2f;
 
-        // IluminaÃ§Ã£o ambiente
+        // Iluminação ambiente
         RenderSettings.ambientLight = Color.Lerp(
             new Color(0.04f, 0.05f, 0.12f),
             new Color(0.8f, 0.8f, 0.8f),
             intensidade
         );
 
-        // TransiÃ§Ã£o das cores do cÃ©u
+        // Transição das cores do céu
         if (skyboxInstancia != null)
         {
             Color corDia = Color.white;
@@ -65,7 +61,7 @@ public class DayNightCycle : MonoBehaviour
 
             skyboxInstancia.SetColor("_Tint", corAtual);
 
-            // Controla o brilho do cÃ©u
+            // Controla o brilho do céu
             float exposicao = Mathf.Lerp(
                 0.2f,
                 1f,
@@ -74,11 +70,5 @@ public class DayNightCycle : MonoBehaviour
 
             skyboxInstancia.SetFloat("_Exposure", exposicao);
         }
-    }
-
-    public void AvancarParaManha()
-    {
-        tempo = duracaoDoDia * 0.125f;
-        EstaDeNoite = false;
     }
 }
