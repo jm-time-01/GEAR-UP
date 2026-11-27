@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c69bdd4f11036374b932061005a0995b
+guid: f7ff1f02b04667449be107cd80f929fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Botoes_0
+      name: PhoneAlpha_0
       rect:
         serializedVersion: 2
-        x: 613
-        y: 640
-        width: 38
-        height: 38
+        x: 841
+        y: 151
+        width: 413
+        height: 749
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,30 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b4157b755a99d42af9ec6e460c885b
-      internalID: 1462118411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Botoes_1
-      rect:
-        serializedVersion: 2
-        x: 901
-        y: 675
-        width: 37
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2951ff930e0742443b653ce9f569f76a
-      internalID: 1350457122
+      spriteID: ce8163a9c32572c4e88026aa1edaf548
+      internalID: 549529879
       vertices: []
       indices: 
       edges: []
@@ -144,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 910c326023f7d46428a11d6ccf42618d
+    spriteID: 3469757177da9c447b4ef34dce07ea98
     internalID: 0
     vertices: []
     indices: 
@@ -156,8 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Botoes_0: 1462118411
-      Botoes_1: 1350457122
+      PhoneAlpha_0: 549529879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

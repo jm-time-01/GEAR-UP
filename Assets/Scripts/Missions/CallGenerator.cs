@@ -44,6 +44,8 @@ public class CallGenerator : MonoBehaviour
 
     private GameObject carroAtivo;
 
+    public Transform CarroAtivo => carroAtivo != null ? carroAtivo.transform : null;
+
     public bool servicoAtivo { get; private set; }
 
     // Eventos para integração com outros sistemas

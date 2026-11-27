@@ -6,13 +6,10 @@ public class PhoneController : MonoBehaviour
 {
     [Header("Configuração do celular")]
     public RectTransform phone;
-
     public KeyCode phoneKey = KeyCode.Z;
-
     public float animationSpeed = 8f;
 
     private bool phoneOpen = false;
-
     private Vector2 closedPosition;
     private Vector2 openPosition;
 
@@ -22,6 +19,10 @@ public class PhoneController : MonoBehaviour
     [Header("Telas dos aplicativos")]
     // Ordem: Shop, Sound, Phone, Minigame, Messages, Map
     public GameObject[] appScreens = new GameObject[6];
+
+    [Header("Elementos ocultados durante o mapa completo")]
+    public GameObject minimapa;
+    public GameObject iconesChamados;
 
     private GameObject currentApp;
 
@@ -38,10 +39,11 @@ public class PhoneController : MonoBehaviour
         }
 
         openPosition = phone.anchoredPosition;
-
         closedPosition = openPosition + new Vector2(0f, -700f);
 
         phone.anchoredPosition = closedPosition;
+
+        RestaurarElementosMapa();
 
         LockCursor();
     }
@@ -56,16 +58,9 @@ public class PhoneController : MonoBehaviour
             TogglePhone();
         }
 
-        Vector2 targetPosition;
-
-        if (phoneOpen)
-        {
-            targetPosition = openPosition;
-        }
-        else
-        {
-            targetPosition = closedPosition;
-        }
+        Vector2 targetPosition = phoneOpen
+            ? openPosition
+            : closedPosition;
 
         phone.anchoredPosition = Vector2.Lerp(
             phone.anchoredPosition,
@@ -87,6 +82,7 @@ public class PhoneController : MonoBehaviour
         {
             LockCursor();
             CloseAllApps();
+            RestaurarElementosMapa();
         }
 
         OnPhoneStateChanged?.Invoke(phoneOpen);
@@ -94,6 +90,8 @@ public class PhoneController : MonoBehaviour
 
     public void ShowApps()
     {
+        RestaurarElementosMapa();
+
         if (appsPanel != null)
             appsPanel.SetActive(true);
 
@@ -102,13 +100,13 @@ public class PhoneController : MonoBehaviour
 
     public void CloseAllApps()
     {
-        if (appScreens == null)
-            return;
-
-        for (int i = 0; i < appScreens.Length; i++)
+        if (appScreens != null)
         {
-            if (appScreens[i] != null)
-                appScreens[i].SetActive(false);
+            for (int i = 0; i < appScreens.Length; i++)
+            {
+                if (appScreens[i] != null)
+                    appScreens[i].SetActive(false);
+            }
         }
 
         currentApp = null;
@@ -116,11 +114,17 @@ public class PhoneController : MonoBehaviour
 
     public void OpenAppByIndex(int index)
     {
-        if (appScreens == null)
+        if (appScreens == null ||
+            index < 0 ||
+            index >= appScreens.Length)
+        {
             return;
+        }
 
-        if (index < 0 || index >= appScreens.Length)
-            return;
+        if (index != 5)
+        {
+            RestaurarElementosMapa();
+        }
 
         if (appsPanel != null)
             appsPanel.SetActive(false);
@@ -132,19 +136,42 @@ public class PhoneController : MonoBehaviour
             appScreens[index].SetActive(true);
             currentApp = appScreens[index];
         }
+
+        if (index == 5)
+        {
+            OcultarElementosMapa();
+        }
     }
 
-    public void OpenShop() => OpenAppByIndex(0);
+    public void OpenShop()
+    {
+        OpenAppByIndex(0);
+    }
 
-    public void OpenSound() => OpenAppByIndex(1);
+    public void OpenSound()
+    {
+        OpenAppByIndex(1);
+    }
 
-    public void OpenPhone() => OpenAppByIndex(2);
+    public void OpenPhone()
+    {
+        OpenAppByIndex(2);
+    }
 
-    public void OpenMinigame() => OpenAppByIndex(3);
+    public void OpenMinigame()
+    {
+        OpenAppByIndex(3);
+    }
 
-    public void OpenMessages() => OpenAppByIndex(4);
+    public void OpenMessages()
+    {
+        OpenAppByIndex(4);
+    }
 
-    public void OpenMap() => OpenAppByIndex(5);
+    public void OpenMap()
+    {
+        OpenAppByIndex(5);
+    }
 
     public void BackToApps()
     {
@@ -154,6 +181,8 @@ public class PhoneController : MonoBehaviour
             currentApp = null;
         }
 
+        RestaurarElementosMapa();
+
         if (appsPanel != null)
             appsPanel.SetActive(true);
     }
@@ -161,6 +190,8 @@ public class PhoneController : MonoBehaviour
     public void ClosePhone()
     {
         CloseAllApps();
+
+        RestaurarElementosMapa();
 
         phoneOpen = false;
 
@@ -170,6 +201,24 @@ public class PhoneController : MonoBehaviour
         LockCursor();
 
         OnPhoneStateChanged?.Invoke(phoneOpen);
+    }
+
+    private void OcultarElementosMapa()
+    {
+        if (minimapa != null)
+            minimapa.SetActive(false);
+
+        if (iconesChamados != null)
+            iconesChamados.SetActive(false);
+    }
+
+    private void RestaurarElementosMapa()
+    {
+        if (minimapa != null)
+            minimapa.SetActive(true);
+
+        if (iconesChamados != null)
+            iconesChamados.SetActive(true);
     }
 
     public void UnlockCursor()
