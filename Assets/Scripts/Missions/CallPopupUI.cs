@@ -9,9 +9,35 @@ public class CallPopupUI : MonoBehaviour
     public CallGenerator callGenerator;
     public PhoneController phoneController;
 
-    [Header("Tempo de exibição do chamado")]
+    [Header("Tempo do popup")]
     [Min(1f)]
     public float tempoExibicao = 8f;
+
+    [Header("Notificação inicial")]
+    public GameObject notificacaoChamado;
+    public TMP_Text textoNotificacao;
+
+    [Min(1f)]
+    public float tempoNotificacao = 5f;
+
+    private float contadorNotificacao;
+    private bool notificacaoAtiva;
+
+    [Header("Notificação de chamados pendentes")]
+    public GameObject notificacaoPendente;
+    public TMP_Text textoPendente;
+
+    [Min(1f)]
+    public float intervaloLembrete = 120f;
+
+    [Min(1f)]
+    public float tempoNotificacaoPendente = 5f;
+
+    private float contadorLembrete;
+    private float contadorNotificacaoPendente;
+
+    private bool chamadoPendente;
+    private bool notificacaoPendenteAtiva;
 
     [Header("Popup 1 - Chamado recebido")]
     public GameObject popupChamadoRecebido;
@@ -32,27 +58,25 @@ public class CallPopupUI : MonoBehaviour
 
     private void Start()
     {
-        // Esconde os dois popups ao iniciar
         EsconderPopups();
+        EsconderNotificacao();
+        EsconderNotificacaoPendente();
 
         if (callGenerator == null)
         {
-            Debug.LogError("CallGenerator não configurado no CallPopupUI!");
+            Debug.LogError("CallGenerator não configurado!");
             return;
         }
 
         if (phoneController == null)
         {
-            Debug.LogError("PhoneController não configurado no CallPopupUI!");
+            Debug.LogError("PhoneController não configurado!");
             return;
         }
 
-        // Conecta aos eventos
         callGenerator.OnCallGenerated += MostrarChamado;
-
         phoneController.OnPhoneStateChanged += AtualizarEstadoCelular;
 
-        // Configura os botões
         if (botaoAceitar != null)
             botaoAceitar.onClick.AddListener(AceitarChamado);
 
@@ -67,29 +91,53 @@ public class CallPopupUI : MonoBehaviour
 
     private void Update()
     {
-        // O contador só funciona enquanto o popup
-        // está visível e o celular está aberto.
-        if (!popupRecebidoVisivel)
+        if (phoneController == null)
             return;
 
-        if (phoneController == null || !phoneController.IsPhoneOpen)
-            return;
-
-        contadorPopup -= Time.deltaTime;
-
-        if (contadorPopup <= 0f)
+        if (popupRecebidoVisivel && phoneController.IsPhoneOpen)
         {
-            EsconderPopupRecebido();
+            contadorPopup -= Time.deltaTime;
+
+            if (contadorPopup <= 0f)
+                EsconderPopupRecebido();
+        }
+
+        if (notificacaoAtiva)
+        {
+            contadorNotificacao -= Time.deltaTime;
+
+            if (contadorNotificacao <= 0f)
+                EsconderNotificacao();
+        }
+
+        // Continua contando mesmo quando o celular é aberto
+        if (chamadoPendente)
+        {
+            contadorLembrete -= Time.deltaTime;
+
+            if (contadorLembrete <= 0f)
+            {
+                if (!phoneController.IsPhoneOpen)
+                    MostrarNotificacaoPendente();
+
+                contadorLembrete = intervaloLembrete;
+            }
+        }
+
+        if (notificacaoPendenteAtiva)
+        {
+            contadorNotificacaoPendente -= Time.deltaTime;
+
+            if (contadorNotificacaoPendente <= 0f)
+                EsconderNotificacaoPendente();
         }
     }
 
-    // CHAMADO GERADO
     private void MostrarChamado(CallData chamado)
     {
         if (chamado == null)
             return;
 
-        // Atualiza a primeira mensagem
         if (textoCliente != null)
             textoCliente.text = chamado.nomeCliente;
 
@@ -100,19 +148,87 @@ public class CallPopupUI : MonoBehaviour
                 chamado.pagamento.ToString("F2");
         }
 
-        // Reinicia o tempo de exibição
+        popupRecebidoVisivel = true;
         contadorPopup = tempoExibicao;
 
-        popupRecebidoVisivel = true;
+        chamadoPendente = true;
+        contadorLembrete = intervaloLembrete;
 
-        // Só mostra se o celular estiver aberto
-        if (phoneController != null &&
-            phoneController.IsPhoneOpen)
+        if (phoneController != null && phoneController.IsPhoneOpen)
         {
             MostrarPopupRecebido();
+            EsconderNotificacao();
+            EsconderNotificacaoPendente();
+        }
+        else
+        {
+            MostrarNotificacao();
         }
 
-        Debug.Log("Chamado recebido registrado na interface!");
+        Debug.Log("Chamado recebido!");
+    }
+
+    private void MostrarNotificacao()
+    {
+        if (phoneController != null && phoneController.IsPhoneOpen)
+            return;
+
+        if (textoNotificacao != null)
+        {
+            textoNotificacao.text =
+                "Novo chamado recebido!\n" +
+                "Abra o celular para ver.";
+        }
+
+        if (notificacaoChamado != null)
+            notificacaoChamado.SetActive(true);
+
+        notificacaoAtiva = true;
+        contadorNotificacao = tempoNotificacao;
+
+        Debug.Log("Notificação inicial exibida!");
+    }
+
+    private void EsconderNotificacao()
+    {
+        notificacaoAtiva = false;
+
+        if (notificacaoChamado != null)
+            notificacaoChamado.SetActive(false);
+    }
+
+    private void MostrarNotificacaoPendente()
+    {
+        if (phoneController != null && phoneController.IsPhoneOpen)
+            return;
+
+        if (notificacaoPendente == null || textoPendente == null)
+        {
+            Debug.LogWarning(
+                "Painel ou texto da notificação pendente não configurado!"
+            );
+
+            return;
+        }
+
+        textoPendente.text =
+            "Você tem mensagens pendentes!\n" +
+            "Abra o celular para conferir seus chamados.";
+
+        notificacaoPendente.SetActive(true);
+
+        notificacaoPendenteAtiva = true;
+        contadorNotificacaoPendente = tempoNotificacaoPendente;
+
+        Debug.Log("Lembrete de chamado pendente exibido!");
+    }
+
+    private void EsconderNotificacaoPendente()
+    {
+        notificacaoPendenteAtiva = false;
+
+        if (notificacaoPendente != null)
+            notificacaoPendente.SetActive(false);
     }
 
     private void MostrarPopupRecebido()
@@ -132,7 +248,6 @@ public class CallPopupUI : MonoBehaviour
             popupChamadoRecebido.SetActive(false);
     }
 
-    // ACEITAR CHAMADO
     public void AceitarChamado()
     {
         if (callGenerator == null)
@@ -140,7 +255,6 @@ public class CallPopupUI : MonoBehaviour
 
         callGenerator.AceitarChamado();
 
-        // Confirma que o serviço realmente foi aceito
         if (!callGenerator.servicoAtivo)
             return;
 
@@ -149,7 +263,6 @@ public class CallPopupUI : MonoBehaviour
         if (chamado == null)
             return;
 
-        // Preenche o segundo popup
         if (textoProblema != null)
         {
             textoProblema.text =
@@ -164,21 +277,20 @@ public class CallPopupUI : MonoBehaviour
                 chamado.endereco;
         }
 
+        chamadoPendente = false;
+        contadorLembrete = 0f;
+
         popupRecebidoVisivel = false;
         detalhesServicoAbertos = true;
 
-        // Primeiro popup desaparece
+        EsconderNotificacao();
+        EsconderNotificacaoPendente();
+
         if (popupChamadoRecebido != null)
             popupChamadoRecebido.SetActive(false);
 
-        // Segundo popup aparece
-        if (phoneController != null &&
-            phoneController.IsPhoneOpen)
-        {
+        if (phoneController != null && phoneController.IsPhoneOpen)
             MostrarPopupServico();
-        }
-
-        Debug.Log("Chamado aceito. Detalhes do serviço exibidos!");
     }
 
     private void MostrarPopupServico()
@@ -190,7 +302,6 @@ public class CallPopupUI : MonoBehaviour
             popupServicoAceito.SetActive(true);
     }
 
-    // RECUSAR CHAMADO
     public void RecusarChamado()
     {
         if (callGenerator == null)
@@ -198,39 +309,37 @@ public class CallPopupUI : MonoBehaviour
 
         callGenerator.RecusarChamado();
 
+        chamadoPendente = false;
+        contadorLembrete = 0f;
+
         popupRecebidoVisivel = false;
         detalhesServicoAbertos = false;
 
         EsconderPopups();
+        EsconderNotificacao();
+        EsconderNotificacaoPendente();
     }
 
-    // BOTÃO ENTENDI
     public void FecharDetalhes()
     {
         detalhesServicoAbertos = false;
 
         if (popupServicoAceito != null)
             popupServicoAceito.SetActive(false);
-
-        // O serviço continua ativo.
     }
 
-    // CELULAR ABERTO OU FECHADO
     private void AtualizarEstadoCelular(bool aberto)
     {
         if (!aberto)
         {
-            // Fechar o celular apenas esconde a interface.
-            // Não recusa nem cancela o chamado.
             EsconderPopups();
             return;
         }
 
-        // Ao abrir o celular, verifica o estado do chamado.
-        if (callGenerator == null)
-            return;
+        EsconderNotificacao();
+        EsconderNotificacaoPendente();
 
-        if (callGenerator.chamadoAtual == null)
+        if (callGenerator == null || callGenerator.chamadoAtual == null)
         {
             EsconderPopups();
             return;
@@ -238,18 +347,13 @@ public class CallPopupUI : MonoBehaviour
 
         if (callGenerator.chamadoAtual.status == CallStatus.Pendente)
         {
-            // Chamado pendente: mostra novamente
-            // e reinicia o tempo de exibição.
             popupRecebidoVisivel = true;
             contadorPopup = tempoExibicao;
 
             MostrarPopupRecebido();
         }
-        else if (callGenerator.servicoAtivo &&
-                 detalhesServicoAbertos)
+        else if (callGenerator.servicoAtivo && detalhesServicoAbertos)
         {
-            // Serviço aceito: mostra os detalhes
-            // se o jogador ainda não os fechou.
             MostrarPopupServico();
         }
     }
