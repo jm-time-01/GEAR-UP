@@ -9,10 +9,6 @@ public class CallPopupUI : MonoBehaviour
     public CallGenerator callGenerator;
     public PhoneController phoneController;
 
-    [Header("Tempo do popup")]
-    [Min(1f)]
-    public float tempoExibicao = 8f;
-
     [Header("Notificação inicial")]
     public GameObject notificacaoChamado;
     public TMP_Text textoNotificacao;
@@ -52,8 +48,6 @@ public class CallPopupUI : MonoBehaviour
     public TMP_Text textoLocal;
     public Button botaoEntendi;
 
-    private float contadorPopup;
-    private bool popupRecebidoVisivel;
     private bool detalhesServicoAbertos;
 
     private void Start()
@@ -94,14 +88,6 @@ public class CallPopupUI : MonoBehaviour
         if (phoneController == null)
             return;
 
-        if (popupRecebidoVisivel && phoneController.IsPhoneOpen)
-        {
-            contadorPopup -= Time.deltaTime;
-
-            if (contadorPopup <= 0f)
-                EsconderPopupRecebido();
-        }
-
         if (notificacaoAtiva)
         {
             contadorNotificacao -= Time.deltaTime;
@@ -110,7 +96,6 @@ public class CallPopupUI : MonoBehaviour
                 EsconderNotificacao();
         }
 
-        // Continua contando mesmo quando o celular é aberto
         if (chamadoPendente)
         {
             contadorLembrete -= Time.deltaTime;
@@ -148,9 +133,6 @@ public class CallPopupUI : MonoBehaviour
                 chamado.pagamento.ToString("F2");
         }
 
-        popupRecebidoVisivel = true;
-        contadorPopup = tempoExibicao;
-
         chamadoPendente = true;
         contadorLembrete = intervaloLembrete;
 
@@ -162,6 +144,7 @@ public class CallPopupUI : MonoBehaviour
         }
         else
         {
+            EsconderPopups();
             MostrarNotificacao();
         }
 
@@ -240,14 +223,6 @@ public class CallPopupUI : MonoBehaviour
             popupServicoAceito.SetActive(false);
     }
 
-    private void EsconderPopupRecebido()
-    {
-        popupRecebidoVisivel = false;
-
-        if (popupChamadoRecebido != null)
-            popupChamadoRecebido.SetActive(false);
-    }
-
     public void AceitarChamado()
     {
         if (callGenerator == null)
@@ -280,14 +255,11 @@ public class CallPopupUI : MonoBehaviour
         chamadoPendente = false;
         contadorLembrete = 0f;
 
-        popupRecebidoVisivel = false;
         detalhesServicoAbertos = true;
 
         EsconderNotificacao();
         EsconderNotificacaoPendente();
-
-        if (popupChamadoRecebido != null)
-            popupChamadoRecebido.SetActive(false);
+        EsconderPopups();
 
         if (phoneController != null && phoneController.IsPhoneOpen)
             MostrarPopupServico();
@@ -312,7 +284,6 @@ public class CallPopupUI : MonoBehaviour
         chamadoPendente = false;
         contadorLembrete = 0f;
 
-        popupRecebidoVisivel = false;
         detalhesServicoAbertos = false;
 
         EsconderPopups();
@@ -347,9 +318,6 @@ public class CallPopupUI : MonoBehaviour
 
         if (callGenerator.chamadoAtual.status == CallStatus.Pendente)
         {
-            popupRecebidoVisivel = true;
-            contadorPopup = tempoExibicao;
-
             MostrarPopupRecebido();
         }
         else if (callGenerator.servicoAtivo && detalhesServicoAbertos)

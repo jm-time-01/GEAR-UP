@@ -1,8 +1,10 @@
-using JetBrains.Annotations;
+
+using System;
 using UnityEngine;
 
 public class PhoneController : MonoBehaviour
 {
+    [Header("Configuração do celular")]
     public RectTransform phone;
 
     public KeyCode phoneKey = KeyCode.Z;
@@ -14,17 +16,27 @@ public class PhoneController : MonoBehaviour
     private Vector2 closedPosition;
     private Vector2 openPosition;
 
-    // Painel que mostra os ícones dos apps (seletor)
+    [Header("Painel de aplicativos")]
     public GameObject appsPanel;
 
-    // Telas/Apps individuais na mesma ordem dos botões: Shop, Sound, Phone, Minigame, Messages, Map
+    [Header("Telas dos aplicativos")]
+    // Ordem: Shop, Sound, Phone, Minigame, Messages, Map
     public GameObject[] appScreens = new GameObject[6];
 
-    // Referência para a tela atualmente aberta (ou null)
     private GameObject currentApp;
 
-    void Start()
+    public bool IsPhoneOpen => phoneOpen;
+
+    public event Action<bool> OnPhoneStateChanged;
+
+    private void Start()
     {
+        if (phone == null)
+        {
+            Debug.LogError("RectTransform do celular não configurado!");
+            return;
+        }
+
         openPosition = phone.anchoredPosition;
 
         closedPosition = openPosition + new Vector2(0f, -700f);
@@ -34,8 +46,11 @@ public class PhoneController : MonoBehaviour
         LockCursor();
     }
 
-    void Update()
+    private void Update()
     {
+        if (phone == null)
+            return;
+
         if (Input.GetKeyDown(phoneKey))
         {
             TogglePhone();
@@ -52,11 +67,14 @@ public class PhoneController : MonoBehaviour
             targetPosition = closedPosition;
         }
 
-        phone.anchoredPosition = Vector2.Lerp(phone.anchoredPosition, targetPosition, animationSpeed * Time.deltaTime);
+        phone.anchoredPosition = Vector2.Lerp(
+            phone.anchoredPosition,
+            targetPosition,
+            animationSpeed * Time.deltaTime
+        );
     }
-    
 
-    public void TogglePhone ()
+    public void TogglePhone()
     {
         phoneOpen = !phoneOpen;
 
@@ -70,32 +88,45 @@ public class PhoneController : MonoBehaviour
             LockCursor();
             CloseAllApps();
         }
-        
+
+        OnPhoneStateChanged?.Invoke(phoneOpen);
     }
 
-    // Mostra o painel de seleção de apps
     public void ShowApps()
     {
-        if (appsPanel != null) appsPanel.SetActive(true);
+        if (appsPanel != null)
+            appsPanel.SetActive(true);
+
         CloseAllApps();
     }
 
-    // Fecha todas as telas/apps
     public void CloseAllApps()
     {
+        if (appScreens == null)
+            return;
+
         for (int i = 0; i < appScreens.Length; i++)
         {
-            if (appScreens[i] != null) appScreens[i].SetActive(false);
+            if (appScreens[i] != null)
+                appScreens[i].SetActive(false);
         }
+
         currentApp = null;
     }
 
-    // Abre app por índice (0..5)
     public void OpenAppByIndex(int index)
     {
-        if (index < 0 || index >= appScreens.Length) return;
-        if (appsPanel != null) appsPanel.SetActive(false);
+        if (appScreens == null)
+            return;
+
+        if (index < 0 || index >= appScreens.Length)
+            return;
+
+        if (appsPanel != null)
+            appsPanel.SetActive(false);
+
         CloseAllApps();
+
         if (appScreens[index] != null)
         {
             appScreens[index].SetActive(true);
@@ -103,15 +134,18 @@ public class PhoneController : MonoBehaviour
         }
     }
 
-    // Métodos conveniência para ligar aos 6 botões via Inspector
     public void OpenShop() => OpenAppByIndex(0);
+
     public void OpenSound() => OpenAppByIndex(1);
+
     public void OpenPhone() => OpenAppByIndex(2);
+
     public void OpenMinigame() => OpenAppByIndex(3);
+
     public void OpenMessages() => OpenAppByIndex(4);
+
     public void OpenMap() => OpenAppByIndex(5);
 
-    // Botão voltar do celular: fecha app atual e retorna ao seletor
     public void BackToApps()
     {
         if (currentApp != null)
@@ -119,19 +153,23 @@ public class PhoneController : MonoBehaviour
             currentApp.SetActive(false);
             currentApp = null;
         }
-        if (appsPanel != null) appsPanel.SetActive(true);
+
+        if (appsPanel != null)
+            appsPanel.SetActive(true);
     }
 
-    // Fecha app atual e esconde o celular
     public void ClosePhone()
     {
         CloseAllApps();
+
         phoneOpen = false;
+
         if (phone != null)
-        {
             phone.anchoredPosition = closedPosition;
-        }
+
         LockCursor();
+
+        OnPhoneStateChanged?.Invoke(phoneOpen);
     }
 
     public void UnlockCursor()
